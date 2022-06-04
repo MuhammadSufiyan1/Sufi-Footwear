@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOginPage-Sufi-footwears</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href=""><img src="./images/logo.png" class="logo"></a>
+        <div class="toggleMenu" onclick="menuToggle()"></div>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="login.html">Sign Up</a></li>
+            <li><a href="cart.html">Cart</a></li>
+
+        </ul>
+        
+    </header>
+    <div class="hero">
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="./images/AIR MAX 97 __ Nike Ad (Unofficial).mp4" type="video/mp4">
+            </video>
+
+        <div class="formbox">
+            <div class="buttonbox">
+                <div id="btn1"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="socialicons">
+                <a href="https://www.facebook.com/MS-Collections-1139558712745206/ "><img src="./images/fb.png"></a>
+                <a href=""><img src="./images/tw.png"></a>
+                <a href=""><img src="./images/gp.png"></a>
+            </div>
+            <form id="login" class="inputgroup">
+                <input type="text" id="signupname" class="inputfield" placeholder="User Name"required>
+                <input type="password" id="signuppass" class="inputfield" placeholder="Enter Password"required>
+                <input type="checkbox" class="checkbox"><span>Remember Password</span> 
+                <button type="submit" class="submitbtn" onclick="getlog()">Sign In</button>
+            </form>
+            <form id="register" class="inputgroup" >
+                <input type="text" id="registername" class="inputfield" placeholder="User Name"required>
+                <input type="email" id="registeremail" class="inputfield" placeholder="Email Id"required>
+                <input type="password" id="registerpass" class="inputfield" placeholder="Email Password">
+                <input type="checkbox" class="checkbox"><span>I agreed to terms and conditions</span> 
+                <button type="submit" class="submitbtn" onclick="getit()">Register</button>
+            </form>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        var x = document.getElementById("login")
+        var y = document.getElementById("register")
+        var z = document.getElementById("btn1")
+
+        function register(){
+            x.style.left = "-400px"
+            y.style.left = "50px"
+            z.style.left = "110px"
+        }
+
+        function login(){
+            x.style.left = "50px"
+            y.style.left = "450px"
+            z.style.left = "0px"
+        }
+    </script>
+</body>
+<script src="app.js"></script>
+</html>

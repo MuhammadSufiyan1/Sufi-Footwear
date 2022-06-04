@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+.main-card{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background: linear-gradient(red,orange);
+    
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background: #000;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    
+}
+.card:hover{
+    width: 600px;
+}
+
+.card .imgBx{
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+    
+
+}
+.green .imgBx{
+    background-color: rgb(89, 152, 112);
+}
+.blue .imgBx{
+    background-color: rgb(2, 72, 95);
+}
+.orange .imgBx{
+    background-color: rgb(255, 93, 6);
+}
+
+.card .imgBx img{
+    max-width: 250px;
+    transition: 0.5s ease-in-out;
+}
+.card:hover .imgBx img{
+    transform: rotate(-35deg);
+}
+.card .details{
+    position: absolute;
+    left: 0;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px;
+    flex-direction: column;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    background-color: rgb(235, 235, 235);
+}
+
+.card:hover .details{
+    left: 300px;
+}
+.card .details::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+
+
+}
+.card .details h3{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1em;
+    color: #000;
+}
+
+
+/* .blue .details h3{
+    color:rgb(2, 72, 95) ;
+
+}
+.green .details h3{
+    color: rgb(89, 152, 112);
+
+}
+.orange .details h3{
+    color: rgb(255, 93, 6);
+
+} */
+/* .blue .details h4{
+    color:rgb(2, 72, 95) ;
+
+}
+.green .details h4{
+    color: rgb(89, 152, 112);
+
+}
+.orange .details h4{
+    color: rgb(255, 93, 6);
+
+} */
+.blue .details p{
+    color:rgb(2, 72, 95) ;
+
+}
+.green .details p{
+    color: rgb(89, 152, 112);
+
+}
+.orange .details p{
+    color: rgb(255, 93, 6);
+
+}
+.card .details h3 span{
+    font-size: 0.65rem;
+    font-weight: 300;
+    text-transform: none;
+    opacity: 0.85;
+}
+.card .details h4{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1em;
+    color: #000;
+}
+.card .details p{
+    opacity: 0.85;
+    font-size: 0.8em;
+}
+.card .details .size{
+    display: flex;
+    gap: 10px;
+}
+.card .details .size li{
+    list-style: none;
+    font-size: 1em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #000;
+}
+.green .details .size li{
+    /* color: rgb(89, 152, 112); */
+    border: 2px solid rgb(89, 152, 112);
+
+}
+.blue .details .size li{
+    /* color:rgb(2, 72, 95) ; */
+    border: 2px solid rgb(2, 72, 95);
+
+}
+.orange .details .size li{
+    /* color: rgb(255, 93, 6); */
+    border: 2px solid rgb(255, 93, 6);
+
+}
+.card .details .size li:hover{
+    background: rgb(184, 181, 181);
+    opacity: 1;
+
+}
+.green .details .size li:hover{
+    color: rgb(89, 152, 112);
+}
+
+.blue .details .size li:hover{
+    color: rgb(2, 72, 95);
+}
+.orange .details .size li:hover{
+    color: rgb(255, 93, 6);
+}
+
+.group{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card .details .group h2{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.card .details .group h2 sup{
+    font-weight: 300;
+}
+.card .details .group h2 small{
+    font-size: 0.75em;
+}
+.green .details .group a{
+    background-color: rgb(89, 152, 112);
+}
+.orange .details .group a{
+    background-color: rgb(255, 93, 6);
+}
+.blue .details .group a{
+    background-color: rgb(2, 72, 95);
+}
+.card .details .group a{
+    display: inline-flex;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ffffff;
+    border-radius: 20px;
+}
+@media (max-width: 991px){
+    .main-card{
+        flex-direction: column;
+    }
+    .card{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 350px){
+    .card{
+        display: none;
+    }
+    .card:hover{
+        width: 400px;
+    }
+    .main-card{
+        display: none;
+    }
+}

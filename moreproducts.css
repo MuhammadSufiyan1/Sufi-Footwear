@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hero .card{
+    position: relative;
+    width: 320px;
+    height: 470px;
+    background: black;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 70px;
+    
+}
+.hero .card::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+.orange::before{
+    background: rgb(255, 93, 6);
+}
+.green::before{
+    background: rgb(89, 152, 112);
+}
+.blue::before{
+    background: rgb(2, 72, 95);
+}
+.hero .card:hover::before{
+    top: -70%;
+    transform: skewY(390deg);
+
+}
+.hero .card::after{
+    content: 'Nike Air Max';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 8em;
+    color: rgba(0,0,0,0.1);
+}
+.hero .card .imgBx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    z-index: 1;
+}
+.hero .card .imgBx img{
+    max-width: 100%;
+    transition: 0.5s;
+}
+.hero .card:hover .imgBx img{
+    transform: rotate(-25deg);
+    transition: 0.5s;
+}
+.hero .card .contentBx{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+
+}
+
+.hero .card .contentBx h3{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.hero .card .contentBx .price{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+.hero .card .contentBx .buy{
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.orange .contentBx .buy{
+    background: rgb(255, 93, 6);
+
+}
+.green .contentBx .buy{
+    background: rgb(89, 152, 112);
+
+}
+.blue .contentBx .buy{
+    background: rgb(2, 72, 95);
+
+}
+
+.red::before .contentBx .buy{
+background: rgb(220, 55, 14);
+
+}
+
+.card:hover .contentBx .buy{
+    top: 0;
+    opacity: 1;
+
+}
+
+@media (max-width: 940px){
+    .hero{
+        flex-direction: column;
+    }
+    .card{
+        margin-top: 30px;
+    }
+}

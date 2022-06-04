@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe-Sufi-footwears</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(255, 93, 6);" id="body1">
+    <header>
+        <a href=""><img src="./images/logo.png" class="logo"></a>
+        <div class="toggleMenu" onclick="menuToggle()"></div>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="login.html">Sign Up</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <style>
+                .navigation li a{
+                    color: black;
+                    font-weight: bold   ;
+                }
+            </style>
+
+        </ul>
+    </header>
+    <div id="small-container single-product">
+        <div id="row">
+            <div id="col2">
+                <img src="./images/1.png" width="80%" style="background-color: rgb(255, 93, 6);" id="ProductImg">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="./images/2.png" width="80%" class="small-img" id="small-img1">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/3.png" width="80%" class="small-img" id="small-img2">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/4.png" width="80%" class="small-img" id="small-img3">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/5.png" width="80%" class="small-img" id="small-img4">
+                    </div>
+                </div>
+            </div>
+            <div id="col2">
+                <p>Home / T-shirts</p>
+                <h1>NIKE AIR MAX</h1>
+                <h4 id="pri" style="background-color: rgb(255, 93, 6);">$50.00</h4>
+                <select id="select" style="border: 1px solid rgb(255, 93, 6);">
+                    <option>Select Size</option>
+                    <option>36</option>
+                    <option>38</option>
+                    <option>40</option>
+                    <option>42</option>
+                    <option>44</option>
+                </select>
+                <input id="input1" type="number"value="1" style="border: 1px solid rgb(255, 93, 6);">
+                <a href="" id="btn">Add To Cart</a>
+                <style>
+                    #input1{
+                        border-radius: 50%;
+                        border: none;
+                    }
+                    #btn:hover{
+                        background-color: rgb(255, 93, 6);
+                        color: rgb(0, 0, 0);
+                        border: 2px solid black;
+                        transition: 0.5s;
+                        
+                    }
+                    #btn{
+                        background-color: rgb(0, 0, 0);
+                        color: rgb(255, 93, 6);
+
+                    }
+                </style>
+                <h3>Product Details</h3>
+                <p>Give your  summer wardrobe a style upgrade with the HRX
+                    Men's <br> Active T-shirt Team it with a pair of shorts for
+                    your morning workout <br> or a denims for a evening out with
+                    the guys
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // function orange(){
+        //     var One = document.getElementById('ProductImg')
+        //     one.src = './images/1.png'
+        //     one.style.backgroundColor ="rgb(255, 93, 6)";
+        //     var body1 = document.getElementById('body1')
+        //     body1.style.backgroundColor ="red";
+        //     var pri = document.getElementById('pri')
+        //     pri.style.backgroundColor ="rgb(255, 93, 6)";
+        //     var select = document.getElementById('select')
+        //     select.style.border = '1px solid rgb(255, 93, 6)'
+        //     var input1 = document.getElementById('input1')
+        //     input1style.border = '1px solid rgb(255, 93, 6)'
+        //     var btn = document.getElementById('btn')
+        //     btn.style.color = 'rgb(255, 93, 6)'
+        //     document.appendChild(body1)   
+        // }
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img")
+
+        SmallImg[0].onclick = function(){
+            ProductImg.src = SmallImg[0].src
+        }
+        SmallImg[1].onclick = function(){
+            ProductImg.src = SmallImg[1].src
+        }
+        SmallImg[2].onclick = function(){
+            ProductImg.src = SmallImg[2].src
+        }
+        SmallImg[3].onclick = function(){
+            ProductImg.src = SmallImg[3].src
+        }
+    </script>
+
+<div id="footer">
+    <div id="container">
+        <div id="row">
+            <div id="footer-col1">
+                <h3>Download our App</h3>
+                <p>Download App for Android and ios mobile phone#</p>
+                <div id="app-logo">
+                    <img src="./images/play-store.png">
+                    <img src="./images/app-store.png">
+                </div>
+            </div>
+            <div id="footer-col2">
+                <img src="./images/logo.png">
+                <p>Our Purpose Is To Sustainably Make th Pleasure and Benefits of Sports Accessible to the Many#</p>
+            </div>
+            <div id="footer-col3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div id="footer-col4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <hr class="fl">
+                    <li>Twitter</li>
+                    <hr class="fl">
+                    <li>Instagram</li>
+                    <hr class="fl">
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p id="copyright"> Copyright 2020 - Muhammad Sufiyan Khalid</p>
+    </div>
+</div>
+<script>
+    function imgSlider(anything){
+        document.querySelector('.shoe').src = anything;
+    }
+    function changebgcolor(color){
+        var sec = document.querySelector('.sec')
+        sec.style.background = color;
+    }
+
+
+</script>
+</body>
+<script src="app.js"></script>
+</html>
